@@ -1,5 +1,7 @@
 ﻿open System.IO
 
+let readDirectory (dirPath: String) = "test"
+
 // https://stackoverflow.com/questions/2365527/how-read-a-file-into-a-seq-of-lines-in-f
 let readLines (filePath: string) = seq {
     use sr = new StreamReader (filePath)
@@ -73,15 +75,19 @@ let rec countLoc (lines: List<string>, count: int) : int =
 
 let main2 = let list = seqToList(readLines("./Program.fs")) in countLoc(list, 0)
 
-
+// Need this to be a -> String[] -> int instead of a -> unit
 let run = printf "%d" main2
-
-// let run = printf "%s" (getExtension("Program.fs")) 
 
 run
 
+// let run = printf "%s" (getExtension("Program.fs")) 
+
+
+
 // [<EntryPoint>]
 // let main args = printfn "args : %A" args; 0;
+
+
 
 
 // I think in main, I just want to check for the directory, and have mapping somewhere else to the comment type 
