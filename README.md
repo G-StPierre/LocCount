@@ -13,6 +13,12 @@ dotnet run ./Program.fs
 ```
 
 
+To run the application on every file in a directory, run the following
+
+```dotnetcli
+dotnet run -D [directory]
+```
+
 ## Todo
 - Allow for full directory scans rather than single files
 - Allow for further types of files to be scanned (currently only files using C style comments(//) are supported) 
